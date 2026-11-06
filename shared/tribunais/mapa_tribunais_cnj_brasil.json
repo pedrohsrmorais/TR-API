@@ -1,0 +1,2175 @@
+{
+  "versao": "1.0.0",
+  "atualizado_em": "2026-11-06",
+  "descricao": "Mapa de referência dos órgãos do Poder Judiciário identificáveis pelo trecho J.TR do número único de processo (CNJ).",
+  "formato_numero": {
+    "mascara": "NNNNNNN-DD.AAAA.J.TR.OOOO",
+    "campos": {
+      "NNNNNNN": "Número sequencial do processo no ano, por unidade de origem (7 dígitos).",
+      "DD": "Dígito verificador, calculado pelo algoritmo Módulo 97 Base 10 (ISO 7064).",
+      "AAAA": "Ano de ajuizamento.",
+      "J": "Segmento (ramo) do Poder Judiciário.",
+      "TR": "Tribunal dentro do segmento. 00 = tribunal superior ou CNJ; 90 = CJF ou CSJT.",
+      "OOOO": "Unidade de origem (vara do trabalho, foro, subseção, zona eleitoral ou auditoria). 0000 = processo originário do tribunal."
+    },
+    "digito_verificador": "DD = 98 - (int(NNNNNNN AAAA J TR OOOO 00) mod 97). Validação: int(NNNNNNN AAAA J TR OOOO DD) mod 97 == 1."
+  },
+  "observacoes": [
+    "O trecho J.TR identifica o ramo e o tribunal. Matéria (cível, criminal, família etc.) NÃO é codificada no número: depende dos dados do processo (classe, órgão julgador).",
+    "O campo OOOO identifica a unidade de origem, não a instância atual: um processo de vara do trabalho que subiu ao TRT mantém o mesmo número.",
+    "Os códigos TR de 01 a 27 da Justiça Estadual, Eleitoral e Militar Estadual seguem a mesma tabela de UFs (ex.: 16 = PR, 21 = RS, 26 = SP).",
+    "O campo worker indica qual adapter do robô baixa a íntegra naquele tribunal e em que pé está a implementação.",
+    "URLs de portal são referência. As URLs de PJe dos TRTs seguem o padrão pje.trtN.jus.br e são as que o worker usa."
+  ],
+  "fontes": [
+    {
+      "titulo": "Resolução CNJ nº 65/2008, texto compilado (inclui a redação da Res. 477/2022, que criou o código do TRF6)",
+      "url": "https://atos.cnj.jus.br/atos/detalhar/119"
+    },
+    {
+      "titulo": "Tabela padronizada (anexos da Res. 65/2008)",
+      "url": "https://atos.cnj.jus.br/files/resolucao_65_16122008_04032013165912.pdf"
+    }
+  ],
+  "escopo_atual": {
+    "segmentos_com_download": [
+      "5"
+    ],
+    "nota": "Fase 1: baixar a íntegra de processos dos 24 TRTs. Os demais ramos ficam como referência até a Fase 1 estar concluída."
+  },
+  "resumo": {
+    "tribunais": 92,
+    "conselhos": 3,
+    "circunscricoes_militares": 12
+  },
+  "segmentos": {
+    "1": {
+      "codigo": "1",
+      "nome": "Supremo Tribunal Federal",
+      "sigla_ramo": "STF",
+      "download_habilitado": false,
+      "orgaos": [
+        {
+          "tr": "00",
+          "sigla": "STF",
+          "nome": "Supremo Tribunal Federal",
+          "tipo": "tribunal",
+          "instancia": "superior",
+          "ufs": [
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
+          ],
+          "abrangencia": "Nacional",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://portal.stf.jus.br"
+          }
+        }
+      ]
+    },
+    "2": {
+      "codigo": "2",
+      "nome": "Conselho Nacional de Justiça",
+      "sigla_ramo": "CNJ",
+      "download_habilitado": false,
+      "orgaos": [
+        {
+          "tr": "00",
+          "sigla": "CNJ",
+          "nome": "Conselho Nacional de Justiça",
+          "tipo": "conselho",
+          "instancia": "conselho",
+          "ufs": [
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
+          ],
+          "abrangencia": "Nacional",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://www.cnj.jus.br"
+          }
+        }
+      ]
+    },
+    "3": {
+      "codigo": "3",
+      "nome": "Superior Tribunal de Justiça",
+      "sigla_ramo": "STJ",
+      "download_habilitado": false,
+      "orgaos": [
+        {
+          "tr": "00",
+          "sigla": "STJ",
+          "nome": "Superior Tribunal de Justiça",
+          "tipo": "tribunal",
+          "instancia": "superior",
+          "ufs": [
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
+          ],
+          "abrangencia": "Nacional",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://www.stj.jus.br"
+          }
+        }
+      ]
+    },
+    "4": {
+      "codigo": "4",
+      "nome": "Justiça Federal",
+      "sigla_ramo": "JF",
+      "download_habilitado": false,
+      "orgaos": [
+        {
+          "tr": "90",
+          "sigla": "CJF",
+          "nome": "Conselho da Justiça Federal",
+          "tipo": "conselho",
+          "instancia": "conselho",
+          "ufs": [
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
+          ],
+          "abrangencia": "Nacional",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://www.cjf.jus.br"
+          }
+        },
+        {
+          "tr": "01",
+          "sigla": "TRF1",
+          "nome": "Tribunal Regional Federal da 1ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AC",
+            "AM",
+            "AP",
+            "BA",
+            "DF",
+            "GO",
+            "MA",
+            "MT",
+            "PA",
+            "PI",
+            "RO",
+            "RR",
+            "TO"
+          ],
+          "abrangencia": "AC, AM, AP, BA, DF, GO, MA, MT, PA, PI, RO, RR e TO",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://www.trf1.jus.br"
+          }
+        },
+        {
+          "tr": "02",
+          "sigla": "TRF2",
+          "nome": "Tribunal Regional Federal da 2ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RJ",
+            "ES"
+          ],
+          "abrangencia": "RJ e ES",
+          "sede": "Rio de Janeiro",
+          "urls": {
+            "portal": "https://www.trf2.jus.br"
+          }
+        },
+        {
+          "tr": "03",
+          "sigla": "TRF3",
+          "nome": "Tribunal Regional Federal da 3ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SP",
+            "MS"
+          ],
+          "abrangencia": "SP e MS",
+          "sede": "São Paulo",
+          "urls": {
+            "portal": "https://www.trf3.jus.br"
+          }
+        },
+        {
+          "tr": "04",
+          "sigla": "TRF4",
+          "nome": "Tribunal Regional Federal da 4ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RS",
+            "SC",
+            "PR"
+          ],
+          "abrangencia": "RS, SC e PR",
+          "sede": "Porto Alegre",
+          "urls": {
+            "portal": "https://www.trf4.jus.br"
+          }
+        },
+        {
+          "tr": "05",
+          "sigla": "TRF5",
+          "nome": "Tribunal Regional Federal da 5ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PE",
+            "AL",
+            "CE",
+            "PB",
+            "RN",
+            "SE"
+          ],
+          "abrangencia": "PE, AL, CE, PB, RN e SE",
+          "sede": "Recife",
+          "urls": {
+            "portal": "https://www.trf5.jus.br"
+          }
+        },
+        {
+          "tr": "06",
+          "sigla": "TRF6",
+          "nome": "Tribunal Regional Federal da 6ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MG"
+          ],
+          "abrangencia": "MG",
+          "sede": "Belo Horizonte",
+          "urls": {
+            "portal": "https://www.trf6.jus.br"
+          }
+        }
+      ]
+    },
+    "5": {
+      "codigo": "5",
+      "nome": "Justiça do Trabalho",
+      "sigla_ramo": "JT",
+      "download_habilitado": true,
+      "orgaos": [
+        {
+          "tr": "00",
+          "sigla": "TST",
+          "nome": "Tribunal Superior do Trabalho",
+          "tipo": "tribunal",
+          "instancia": "superior",
+          "ufs": [
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
+          ],
+          "abrangencia": "Nacional",
+          "sede": "Brasília",
+          "sistemas": [
+            "PJe"
+          ],
+          "urls": {
+            "portal": "https://www.tst.jus.br"
+          },
+          "worker": {
+            "adapter": null,
+            "status": "fora_do_escopo_inicial"
+          }
+        },
+        {
+          "tr": "90",
+          "sigla": "CSJT",
+          "nome": "Conselho Superior da Justiça do Trabalho",
+          "tipo": "conselho",
+          "instancia": "conselho",
+          "ufs": [
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
+          ],
+          "abrangencia": "Nacional",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://www.csjt.jus.br"
+          },
+          "worker": {
+            "adapter": null,
+            "status": "fora_do_escopo_inicial"
+          }
+        },
+        {
+          "tr": "01",
+          "sigla": "TRT1",
+          "nome": "Tribunal Regional do Trabalho da 1ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RJ"
+          ],
+          "abrangencia": "Rio de Janeiro",
+          "sede": "Rio de Janeiro",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt1.jus.br",
+            "pje": "https://pje.trt1.jus.br",
+            "consulta_publica": "https://pje.trt1.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "02",
+          "sigla": "TRT2",
+          "nome": "Tribunal Regional do Trabalho da 2ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SP"
+          ],
+          "abrangencia": "São Paulo: capital, Grande São Paulo e Baixada Santista",
+          "sede": "São Paulo",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt2.jus.br",
+            "pje": "https://pje.trt2.jus.br",
+            "consulta_publica": "https://pje.trt2.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "03",
+          "sigla": "TRT3",
+          "nome": "Tribunal Regional do Trabalho da 3ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MG"
+          ],
+          "abrangencia": "Minas Gerais",
+          "sede": "Belo Horizonte",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt3.jus.br",
+            "pje": "https://pje.trt3.jus.br",
+            "consulta_publica": "https://pje.trt3.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "04",
+          "sigla": "TRT4",
+          "nome": "Tribunal Regional do Trabalho da 4ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RS"
+          ],
+          "abrangencia": "Rio Grande do Sul",
+          "sede": "Porto Alegre",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt4.jus.br",
+            "pje": "https://pje.trt4.jus.br",
+            "consulta_publica": "https://pje.trt4.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "05",
+          "sigla": "TRT5",
+          "nome": "Tribunal Regional do Trabalho da 5ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "BA"
+          ],
+          "abrangencia": "Bahia",
+          "sede": "Salvador",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt5.jus.br",
+            "pje": "https://pje.trt5.jus.br",
+            "consulta_publica": "https://pje.trt5.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "06",
+          "sigla": "TRT6",
+          "nome": "Tribunal Regional do Trabalho da 6ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PE"
+          ],
+          "abrangencia": "Pernambuco",
+          "sede": "Recife",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt6.jus.br",
+            "pje": "https://pje.trt6.jus.br",
+            "consulta_publica": "https://pje.trt6.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "07",
+          "sigla": "TRT7",
+          "nome": "Tribunal Regional do Trabalho da 7ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "CE"
+          ],
+          "abrangencia": "Ceará",
+          "sede": "Fortaleza",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt7.jus.br",
+            "pje": "https://pje.trt7.jus.br",
+            "consulta_publica": "https://pje.trt7.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "08",
+          "sigla": "TRT8",
+          "nome": "Tribunal Regional do Trabalho da 8ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PA",
+            "AP"
+          ],
+          "abrangencia": "Pará e Amapá",
+          "sede": "Belém",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt8.jus.br",
+            "pje": "https://pje.trt8.jus.br",
+            "consulta_publica": "https://pje.trt8.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "09",
+          "sigla": "TRT9",
+          "nome": "Tribunal Regional do Trabalho da 9ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PR"
+          ],
+          "abrangencia": "Paraná",
+          "sede": "Curitiba",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt9.jus.br",
+            "pje": "https://pje.trt9.jus.br",
+            "consulta_publica": "https://pje.trt9.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "10",
+          "sigla": "TRT10",
+          "nome": "Tribunal Regional do Trabalho da 10ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "DF",
+            "TO"
+          ],
+          "abrangencia": "Distrito Federal e Tocantins",
+          "sede": "Brasília",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt10.jus.br",
+            "pje": "https://pje.trt10.jus.br",
+            "consulta_publica": "https://pje.trt10.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "11",
+          "sigla": "TRT11",
+          "nome": "Tribunal Regional do Trabalho da 11ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AM",
+            "RR"
+          ],
+          "abrangencia": "Amazonas e Roraima",
+          "sede": "Manaus",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt11.jus.br",
+            "pje": "https://pje.trt11.jus.br",
+            "consulta_publica": "https://pje.trt11.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "12",
+          "sigla": "TRT12",
+          "nome": "Tribunal Regional do Trabalho da 12ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SC"
+          ],
+          "abrangencia": "Santa Catarina",
+          "sede": "Florianópolis",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt12.jus.br",
+            "pje": "https://pje.trt12.jus.br",
+            "consulta_publica": "https://pje.trt12.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "13",
+          "sigla": "TRT13",
+          "nome": "Tribunal Regional do Trabalho da 13ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PB"
+          ],
+          "abrangencia": "Paraíba",
+          "sede": "João Pessoa",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt13.jus.br",
+            "pje": "https://pje.trt13.jus.br",
+            "consulta_publica": "https://pje.trt13.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "14",
+          "sigla": "TRT14",
+          "nome": "Tribunal Regional do Trabalho da 14ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RO",
+            "AC"
+          ],
+          "abrangencia": "Rondônia e Acre",
+          "sede": "Porto Velho",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt14.jus.br",
+            "pje": "https://pje.trt14.jus.br",
+            "consulta_publica": "https://pje.trt14.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "15",
+          "sigla": "TRT15",
+          "nome": "Tribunal Regional do Trabalho da 15ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SP"
+          ],
+          "abrangencia": "São Paulo: interior e litoral (fora da área do TRT-2)",
+          "sede": "Campinas",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt15.jus.br",
+            "pje": "https://pje.trt15.jus.br",
+            "consulta_publica": "https://pje.trt15.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "16",
+          "sigla": "TRT16",
+          "nome": "Tribunal Regional do Trabalho da 16ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MA"
+          ],
+          "abrangencia": "Maranhão",
+          "sede": "São Luís",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt16.jus.br",
+            "pje": "https://pje.trt16.jus.br",
+            "consulta_publica": "https://pje.trt16.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "17",
+          "sigla": "TRT17",
+          "nome": "Tribunal Regional do Trabalho da 17ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "ES"
+          ],
+          "abrangencia": "Espírito Santo",
+          "sede": "Vitória",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt17.jus.br",
+            "pje": "https://pje.trt17.jus.br",
+            "consulta_publica": "https://pje.trt17.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "18",
+          "sigla": "TRT18",
+          "nome": "Tribunal Regional do Trabalho da 18ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "GO"
+          ],
+          "abrangencia": "Goiás",
+          "sede": "Goiânia",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt18.jus.br",
+            "pje": "https://pje.trt18.jus.br",
+            "consulta_publica": "https://pje.trt18.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "19",
+          "sigla": "TRT19",
+          "nome": "Tribunal Regional do Trabalho da 19ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AL"
+          ],
+          "abrangencia": "Alagoas",
+          "sede": "Maceió",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt19.jus.br",
+            "pje": "https://pje.trt19.jus.br",
+            "consulta_publica": "https://pje.trt19.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "20",
+          "sigla": "TRT20",
+          "nome": "Tribunal Regional do Trabalho da 20ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SE"
+          ],
+          "abrangencia": "Sergipe",
+          "sede": "Aracaju",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt20.jus.br",
+            "pje": "https://pje.trt20.jus.br",
+            "consulta_publica": "https://pje.trt20.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "21",
+          "sigla": "TRT21",
+          "nome": "Tribunal Regional do Trabalho da 21ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RN"
+          ],
+          "abrangencia": "Rio Grande do Norte",
+          "sede": "Natal",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt21.jus.br",
+            "pje": "https://pje.trt21.jus.br",
+            "consulta_publica": "https://pje.trt21.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "22",
+          "sigla": "TRT22",
+          "nome": "Tribunal Regional do Trabalho da 22ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PI"
+          ],
+          "abrangencia": "Piauí",
+          "sede": "Teresina",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt22.jus.br",
+            "pje": "https://pje.trt22.jus.br",
+            "consulta_publica": "https://pje.trt22.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "23",
+          "sigla": "TRT23",
+          "nome": "Tribunal Regional do Trabalho da 23ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MT"
+          ],
+          "abrangencia": "Mato Grosso",
+          "sede": "Cuiabá",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt23.jus.br",
+            "pje": "https://pje.trt23.jus.br",
+            "consulta_publica": "https://pje.trt23.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        },
+        {
+          "tr": "24",
+          "sigla": "TRT24",
+          "nome": "Tribunal Regional do Trabalho da 24ª Região",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MS"
+          ],
+          "abrangencia": "Mato Grosso do Sul",
+          "sede": "Campo Grande",
+          "sistemas": [
+            "PJe-JT"
+          ],
+          "urls": {
+            "portal": "https://www.trt24.jus.br",
+            "pje": "https://pje.trt24.jus.br",
+            "consulta_publica": "https://pje.trt24.jus.br/consultaprocessual/"
+          },
+          "worker": {
+            "adapter": "pje-jt",
+            "status": "pendente"
+          }
+        }
+      ]
+    },
+    "6": {
+      "codigo": "6",
+      "nome": "Justiça Eleitoral",
+      "sigla_ramo": "JE",
+      "download_habilitado": false,
+      "orgaos": [
+        {
+          "tr": "00",
+          "sigla": "TSE",
+          "nome": "Tribunal Superior Eleitoral",
+          "tipo": "tribunal",
+          "instancia": "superior",
+          "ufs": [
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
+          ],
+          "abrangencia": "Nacional",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://www.tse.jus.br"
+          }
+        },
+        {
+          "tr": "01",
+          "sigla": "TRE-AC",
+          "nome": "Tribunal Regional Eleitoral do Acre",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AC"
+          ],
+          "abrangencia": "Acre",
+          "sede": "Rio Branco",
+          "urls": {
+            "portal": "https://www.tre-ac.jus.br"
+          }
+        },
+        {
+          "tr": "02",
+          "sigla": "TRE-AL",
+          "nome": "Tribunal Regional Eleitoral de Alagoas",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AL"
+          ],
+          "abrangencia": "Alagoas",
+          "sede": "Maceió",
+          "urls": {
+            "portal": "https://www.tre-al.jus.br"
+          }
+        },
+        {
+          "tr": "03",
+          "sigla": "TRE-AP",
+          "nome": "Tribunal Regional Eleitoral do Amapá",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AP"
+          ],
+          "abrangencia": "Amapá",
+          "sede": "Macapá",
+          "urls": {
+            "portal": "https://www.tre-ap.jus.br"
+          }
+        },
+        {
+          "tr": "04",
+          "sigla": "TRE-AM",
+          "nome": "Tribunal Regional Eleitoral do Amazonas",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AM"
+          ],
+          "abrangencia": "Amazonas",
+          "sede": "Manaus",
+          "urls": {
+            "portal": "https://www.tre-am.jus.br"
+          }
+        },
+        {
+          "tr": "05",
+          "sigla": "TRE-BA",
+          "nome": "Tribunal Regional Eleitoral da Bahia",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "BA"
+          ],
+          "abrangencia": "Bahia",
+          "sede": "Salvador",
+          "urls": {
+            "portal": "https://www.tre-ba.jus.br"
+          }
+        },
+        {
+          "tr": "06",
+          "sigla": "TRE-CE",
+          "nome": "Tribunal Regional Eleitoral do Ceará",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "CE"
+          ],
+          "abrangencia": "Ceará",
+          "sede": "Fortaleza",
+          "urls": {
+            "portal": "https://www.tre-ce.jus.br"
+          }
+        },
+        {
+          "tr": "07",
+          "sigla": "TRE-DF",
+          "nome": "Tribunal Regional Eleitoral do Distrito Federal",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "DF"
+          ],
+          "abrangencia": "Distrito Federal",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://www.tre-df.jus.br"
+          }
+        },
+        {
+          "tr": "08",
+          "sigla": "TRE-ES",
+          "nome": "Tribunal Regional Eleitoral do Espírito Santo",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "ES"
+          ],
+          "abrangencia": "Espírito Santo",
+          "sede": "Vitória",
+          "urls": {
+            "portal": "https://www.tre-es.jus.br"
+          }
+        },
+        {
+          "tr": "09",
+          "sigla": "TRE-GO",
+          "nome": "Tribunal Regional Eleitoral de Goiás",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "GO"
+          ],
+          "abrangencia": "Goiás",
+          "sede": "Goiânia",
+          "urls": {
+            "portal": "https://www.tre-go.jus.br"
+          }
+        },
+        {
+          "tr": "10",
+          "sigla": "TRE-MA",
+          "nome": "Tribunal Regional Eleitoral do Maranhão",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MA"
+          ],
+          "abrangencia": "Maranhão",
+          "sede": "São Luís",
+          "urls": {
+            "portal": "https://www.tre-ma.jus.br"
+          }
+        },
+        {
+          "tr": "11",
+          "sigla": "TRE-MT",
+          "nome": "Tribunal Regional Eleitoral de Mato Grosso",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MT"
+          ],
+          "abrangencia": "Mato Grosso",
+          "sede": "Cuiabá",
+          "urls": {
+            "portal": "https://www.tre-mt.jus.br"
+          }
+        },
+        {
+          "tr": "12",
+          "sigla": "TRE-MS",
+          "nome": "Tribunal Regional Eleitoral de Mato Grosso do Sul",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MS"
+          ],
+          "abrangencia": "Mato Grosso do Sul",
+          "sede": "Campo Grande",
+          "urls": {
+            "portal": "https://www.tre-ms.jus.br"
+          }
+        },
+        {
+          "tr": "13",
+          "sigla": "TRE-MG",
+          "nome": "Tribunal Regional Eleitoral de Minas Gerais",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MG"
+          ],
+          "abrangencia": "Minas Gerais",
+          "sede": "Belo Horizonte",
+          "urls": {
+            "portal": "https://www.tre-mg.jus.br"
+          }
+        },
+        {
+          "tr": "14",
+          "sigla": "TRE-PA",
+          "nome": "Tribunal Regional Eleitoral do Pará",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PA"
+          ],
+          "abrangencia": "Pará",
+          "sede": "Belém",
+          "urls": {
+            "portal": "https://www.tre-pa.jus.br"
+          }
+        },
+        {
+          "tr": "15",
+          "sigla": "TRE-PB",
+          "nome": "Tribunal Regional Eleitoral da Paraíba",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PB"
+          ],
+          "abrangencia": "Paraíba",
+          "sede": "João Pessoa",
+          "urls": {
+            "portal": "https://www.tre-pb.jus.br"
+          }
+        },
+        {
+          "tr": "16",
+          "sigla": "TRE-PR",
+          "nome": "Tribunal Regional Eleitoral do Paraná",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PR"
+          ],
+          "abrangencia": "Paraná",
+          "sede": "Curitiba",
+          "urls": {
+            "portal": "https://www.tre-pr.jus.br"
+          }
+        },
+        {
+          "tr": "17",
+          "sigla": "TRE-PE",
+          "nome": "Tribunal Regional Eleitoral de Pernambuco",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PE"
+          ],
+          "abrangencia": "Pernambuco",
+          "sede": "Recife",
+          "urls": {
+            "portal": "https://www.tre-pe.jus.br"
+          }
+        },
+        {
+          "tr": "18",
+          "sigla": "TRE-PI",
+          "nome": "Tribunal Regional Eleitoral do Piauí",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PI"
+          ],
+          "abrangencia": "Piauí",
+          "sede": "Teresina",
+          "urls": {
+            "portal": "https://www.tre-pi.jus.br"
+          }
+        },
+        {
+          "tr": "19",
+          "sigla": "TRE-RJ",
+          "nome": "Tribunal Regional Eleitoral do Rio de Janeiro",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RJ"
+          ],
+          "abrangencia": "Rio de Janeiro",
+          "sede": "Rio de Janeiro",
+          "urls": {
+            "portal": "https://www.tre-rj.jus.br"
+          }
+        },
+        {
+          "tr": "20",
+          "sigla": "TRE-RN",
+          "nome": "Tribunal Regional Eleitoral do Rio Grande do Norte",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RN"
+          ],
+          "abrangencia": "Rio Grande do Norte",
+          "sede": "Natal",
+          "urls": {
+            "portal": "https://www.tre-rn.jus.br"
+          }
+        },
+        {
+          "tr": "21",
+          "sigla": "TRE-RS",
+          "nome": "Tribunal Regional Eleitoral do Rio Grande do Sul",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RS"
+          ],
+          "abrangencia": "Rio Grande do Sul",
+          "sede": "Porto Alegre",
+          "urls": {
+            "portal": "https://www.tre-rs.jus.br"
+          }
+        },
+        {
+          "tr": "22",
+          "sigla": "TRE-RO",
+          "nome": "Tribunal Regional Eleitoral de Rondônia",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RO"
+          ],
+          "abrangencia": "Rondônia",
+          "sede": "Porto Velho",
+          "urls": {
+            "portal": "https://www.tre-ro.jus.br"
+          }
+        },
+        {
+          "tr": "23",
+          "sigla": "TRE-RR",
+          "nome": "Tribunal Regional Eleitoral de Roraima",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RR"
+          ],
+          "abrangencia": "Roraima",
+          "sede": "Boa Vista",
+          "urls": {
+            "portal": "https://www.tre-rr.jus.br"
+          }
+        },
+        {
+          "tr": "24",
+          "sigla": "TRE-SC",
+          "nome": "Tribunal Regional Eleitoral de Santa Catarina",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SC"
+          ],
+          "abrangencia": "Santa Catarina",
+          "sede": "Florianópolis",
+          "urls": {
+            "portal": "https://www.tre-sc.jus.br"
+          }
+        },
+        {
+          "tr": "25",
+          "sigla": "TRE-SE",
+          "nome": "Tribunal Regional Eleitoral de Sergipe",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SE"
+          ],
+          "abrangencia": "Sergipe",
+          "sede": "Aracaju",
+          "urls": {
+            "portal": "https://www.tre-se.jus.br"
+          }
+        },
+        {
+          "tr": "26",
+          "sigla": "TRE-SP",
+          "nome": "Tribunal Regional Eleitoral de São Paulo",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SP"
+          ],
+          "abrangencia": "São Paulo",
+          "sede": "São Paulo",
+          "urls": {
+            "portal": "https://www.tre-sp.jus.br"
+          }
+        },
+        {
+          "tr": "27",
+          "sigla": "TRE-TO",
+          "nome": "Tribunal Regional Eleitoral do Tocantins",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "TO"
+          ],
+          "abrangencia": "Tocantins",
+          "sede": "Palmas",
+          "urls": {
+            "portal": "https://www.tre-to.jus.br"
+          }
+        }
+      ]
+    },
+    "7": {
+      "codigo": "7",
+      "nome": "Justiça Militar da União",
+      "sigla_ramo": "JMU",
+      "download_habilitado": false,
+      "orgaos": [
+        {
+          "tr": "00",
+          "sigla": "STM",
+          "nome": "Superior Tribunal Militar",
+          "tipo": "tribunal",
+          "instancia": "superior",
+          "ufs": [
+            "AC",
+            "AL",
+            "AP",
+            "AM",
+            "BA",
+            "CE",
+            "DF",
+            "ES",
+            "GO",
+            "MA",
+            "MT",
+            "MS",
+            "MG",
+            "PA",
+            "PB",
+            "PR",
+            "PE",
+            "PI",
+            "RJ",
+            "RN",
+            "RS",
+            "RO",
+            "RR",
+            "SC",
+            "SE",
+            "SP",
+            "TO"
+          ],
+          "abrangencia": "Nacional",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://www.stm.jus.br"
+          }
+        },
+        {
+          "tr": "01",
+          "sigla": "1ª CJM",
+          "nome": "1ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "RJ",
+            "ES"
+          ],
+          "abrangencia": "Rio de Janeiro e Espírito Santo",
+          "sede": "Rio de Janeiro",
+          "urls": {}
+        },
+        {
+          "tr": "02",
+          "sigla": "2ª CJM",
+          "nome": "2ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "SP"
+          ],
+          "abrangencia": "São Paulo",
+          "sede": "São Paulo",
+          "urls": {}
+        },
+        {
+          "tr": "03",
+          "sigla": "3ª CJM",
+          "nome": "3ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "RS"
+          ],
+          "abrangencia": "Rio Grande do Sul",
+          "sede": "Porto Alegre",
+          "urls": {}
+        },
+        {
+          "tr": "04",
+          "sigla": "4ª CJM",
+          "nome": "4ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "MG"
+          ],
+          "abrangencia": "Minas Gerais",
+          "sede": "Juiz de Fora",
+          "urls": {}
+        },
+        {
+          "tr": "05",
+          "sigla": "5ª CJM",
+          "nome": "5ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "PR",
+            "SC"
+          ],
+          "abrangencia": "Paraná e Santa Catarina",
+          "sede": "Curitiba",
+          "urls": {}
+        },
+        {
+          "tr": "06",
+          "sigla": "6ª CJM",
+          "nome": "6ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "BA",
+            "SE"
+          ],
+          "abrangencia": "Bahia e Sergipe",
+          "sede": "Salvador",
+          "urls": {}
+        },
+        {
+          "tr": "07",
+          "sigla": "7ª CJM",
+          "nome": "7ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "PE",
+            "RN",
+            "PB",
+            "AL"
+          ],
+          "abrangencia": "Pernambuco, Rio Grande do Norte, Paraíba e Alagoas",
+          "sede": "Recife",
+          "urls": {}
+        },
+        {
+          "tr": "08",
+          "sigla": "8ª CJM",
+          "nome": "8ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "PA",
+            "AP",
+            "MA"
+          ],
+          "abrangencia": "Pará, Amapá e Maranhão",
+          "sede": "Belém",
+          "urls": {}
+        },
+        {
+          "tr": "09",
+          "sigla": "9ª CJM",
+          "nome": "9ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "MS",
+            "MT"
+          ],
+          "abrangencia": "Mato Grosso do Sul e Mato Grosso",
+          "sede": "Campo Grande",
+          "urls": {}
+        },
+        {
+          "tr": "10",
+          "sigla": "10ª CJM",
+          "nome": "10ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "CE",
+            "PI"
+          ],
+          "abrangencia": "Ceará e Piauí",
+          "sede": "Fortaleza",
+          "urls": {}
+        },
+        {
+          "tr": "11",
+          "sigla": "11ª CJM",
+          "nome": "11ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "DF",
+            "GO",
+            "TO"
+          ],
+          "abrangencia": "Distrito Federal, Goiás e Tocantins",
+          "sede": "Brasília",
+          "urls": {}
+        },
+        {
+          "tr": "12",
+          "sigla": "12ª CJM",
+          "nome": "12ª Circunscrição Judiciária Militar",
+          "tipo": "circunscricao_militar",
+          "instancia": "primeiro_grau",
+          "ufs": [
+            "AM",
+            "AC",
+            "RO",
+            "RR"
+          ],
+          "abrangencia": "Amazonas, Acre, Rondônia e Roraima",
+          "sede": "Manaus",
+          "urls": {}
+        }
+      ]
+    },
+    "8": {
+      "codigo": "8",
+      "nome": "Justiça dos Estados e do Distrito Federal e Territórios",
+      "sigla_ramo": "JE-UF",
+      "download_habilitado": false,
+      "orgaos": [
+        {
+          "tr": "01",
+          "sigla": "TJAC",
+          "nome": "Tribunal de Justiça do Acre",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AC"
+          ],
+          "abrangencia": "Acre",
+          "sede": "Rio Branco",
+          "urls": {
+            "portal": "https://www.tjac.jus.br"
+          }
+        },
+        {
+          "tr": "02",
+          "sigla": "TJAL",
+          "nome": "Tribunal de Justiça de Alagoas",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AL"
+          ],
+          "abrangencia": "Alagoas",
+          "sede": "Maceió",
+          "urls": {
+            "portal": "https://www.tjal.jus.br"
+          }
+        },
+        {
+          "tr": "03",
+          "sigla": "TJAP",
+          "nome": "Tribunal de Justiça do Amapá",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AP"
+          ],
+          "abrangencia": "Amapá",
+          "sede": "Macapá",
+          "urls": {
+            "portal": "https://www.tjap.jus.br"
+          }
+        },
+        {
+          "tr": "04",
+          "sigla": "TJAM",
+          "nome": "Tribunal de Justiça do Amazonas",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "AM"
+          ],
+          "abrangencia": "Amazonas",
+          "sede": "Manaus",
+          "urls": {
+            "portal": "https://www.tjam.jus.br"
+          }
+        },
+        {
+          "tr": "05",
+          "sigla": "TJBA",
+          "nome": "Tribunal de Justiça da Bahia",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "BA"
+          ],
+          "abrangencia": "Bahia",
+          "sede": "Salvador",
+          "urls": {
+            "portal": "https://www.tjba.jus.br"
+          }
+        },
+        {
+          "tr": "06",
+          "sigla": "TJCE",
+          "nome": "Tribunal de Justiça do Ceará",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "CE"
+          ],
+          "abrangencia": "Ceará",
+          "sede": "Fortaleza",
+          "urls": {
+            "portal": "https://www.tjce.jus.br"
+          }
+        },
+        {
+          "tr": "07",
+          "sigla": "TJDFT",
+          "nome": "Tribunal de Justiça do Distrito Federal e dos Territórios",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "DF"
+          ],
+          "abrangencia": "Distrito Federal",
+          "sede": "Brasília",
+          "urls": {
+            "portal": "https://www.tjdft.jus.br"
+          }
+        },
+        {
+          "tr": "08",
+          "sigla": "TJES",
+          "nome": "Tribunal de Justiça do Espírito Santo",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "ES"
+          ],
+          "abrangencia": "Espírito Santo",
+          "sede": "Vitória",
+          "urls": {
+            "portal": "https://www.tjes.jus.br"
+          }
+        },
+        {
+          "tr": "09",
+          "sigla": "TJGO",
+          "nome": "Tribunal de Justiça de Goiás",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "GO"
+          ],
+          "abrangencia": "Goiás",
+          "sede": "Goiânia",
+          "urls": {
+            "portal": "https://www.tjgo.jus.br"
+          }
+        },
+        {
+          "tr": "10",
+          "sigla": "TJMA",
+          "nome": "Tribunal de Justiça do Maranhão",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MA"
+          ],
+          "abrangencia": "Maranhão",
+          "sede": "São Luís",
+          "urls": {
+            "portal": "https://www.tjma.jus.br"
+          }
+        },
+        {
+          "tr": "11",
+          "sigla": "TJMT",
+          "nome": "Tribunal de Justiça de Mato Grosso",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MT"
+          ],
+          "abrangencia": "Mato Grosso",
+          "sede": "Cuiabá",
+          "urls": {
+            "portal": "https://www.tjmt.jus.br"
+          }
+        },
+        {
+          "tr": "12",
+          "sigla": "TJMS",
+          "nome": "Tribunal de Justiça de Mato Grosso do Sul",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MS"
+          ],
+          "abrangencia": "Mato Grosso do Sul",
+          "sede": "Campo Grande",
+          "urls": {
+            "portal": "https://www.tjms.jus.br"
+          }
+        },
+        {
+          "tr": "13",
+          "sigla": "TJMG",
+          "nome": "Tribunal de Justiça de Minas Gerais",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MG"
+          ],
+          "abrangencia": "Minas Gerais",
+          "sede": "Belo Horizonte",
+          "urls": {
+            "portal": "https://www.tjmg.jus.br"
+          }
+        },
+        {
+          "tr": "14",
+          "sigla": "TJPA",
+          "nome": "Tribunal de Justiça do Pará",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PA"
+          ],
+          "abrangencia": "Pará",
+          "sede": "Belém",
+          "urls": {
+            "portal": "https://www.tjpa.jus.br"
+          }
+        },
+        {
+          "tr": "15",
+          "sigla": "TJPB",
+          "nome": "Tribunal de Justiça da Paraíba",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PB"
+          ],
+          "abrangencia": "Paraíba",
+          "sede": "João Pessoa",
+          "urls": {
+            "portal": "https://www.tjpb.jus.br"
+          }
+        },
+        {
+          "tr": "16",
+          "sigla": "TJPR",
+          "nome": "Tribunal de Justiça do Paraná",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PR"
+          ],
+          "abrangencia": "Paraná",
+          "sede": "Curitiba",
+          "urls": {
+            "portal": "https://www.tjpr.jus.br"
+          }
+        },
+        {
+          "tr": "17",
+          "sigla": "TJPE",
+          "nome": "Tribunal de Justiça de Pernambuco",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PE"
+          ],
+          "abrangencia": "Pernambuco",
+          "sede": "Recife",
+          "urls": {
+            "portal": "https://www.tjpe.jus.br"
+          }
+        },
+        {
+          "tr": "18",
+          "sigla": "TJPI",
+          "nome": "Tribunal de Justiça do Piauí",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "PI"
+          ],
+          "abrangencia": "Piauí",
+          "sede": "Teresina",
+          "urls": {
+            "portal": "https://www.tjpi.jus.br"
+          }
+        },
+        {
+          "tr": "19",
+          "sigla": "TJRJ",
+          "nome": "Tribunal de Justiça do Rio de Janeiro",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RJ"
+          ],
+          "abrangencia": "Rio de Janeiro",
+          "sede": "Rio de Janeiro",
+          "urls": {
+            "portal": "https://www.tjrj.jus.br"
+          }
+        },
+        {
+          "tr": "20",
+          "sigla": "TJRN",
+          "nome": "Tribunal de Justiça do Rio Grande do Norte",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RN"
+          ],
+          "abrangencia": "Rio Grande do Norte",
+          "sede": "Natal",
+          "urls": {
+            "portal": "https://www.tjrn.jus.br"
+          }
+        },
+        {
+          "tr": "21",
+          "sigla": "TJRS",
+          "nome": "Tribunal de Justiça do Rio Grande do Sul",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RS"
+          ],
+          "abrangencia": "Rio Grande do Sul",
+          "sede": "Porto Alegre",
+          "urls": {
+            "portal": "https://www.tjrs.jus.br"
+          }
+        },
+        {
+          "tr": "22",
+          "sigla": "TJRO",
+          "nome": "Tribunal de Justiça de Rondônia",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RO"
+          ],
+          "abrangencia": "Rondônia",
+          "sede": "Porto Velho",
+          "urls": {
+            "portal": "https://www.tjro.jus.br"
+          }
+        },
+        {
+          "tr": "23",
+          "sigla": "TJRR",
+          "nome": "Tribunal de Justiça de Roraima",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RR"
+          ],
+          "abrangencia": "Roraima",
+          "sede": "Boa Vista",
+          "urls": {
+            "portal": "https://www.tjrr.jus.br"
+          }
+        },
+        {
+          "tr": "24",
+          "sigla": "TJSC",
+          "nome": "Tribunal de Justiça de Santa Catarina",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SC"
+          ],
+          "abrangencia": "Santa Catarina",
+          "sede": "Florianópolis",
+          "urls": {
+            "portal": "https://www.tjsc.jus.br"
+          }
+        },
+        {
+          "tr": "25",
+          "sigla": "TJSE",
+          "nome": "Tribunal de Justiça de Sergipe",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SE"
+          ],
+          "abrangencia": "Sergipe",
+          "sede": "Aracaju",
+          "urls": {
+            "portal": "https://www.tjse.jus.br"
+          }
+        },
+        {
+          "tr": "26",
+          "sigla": "TJSP",
+          "nome": "Tribunal de Justiça de São Paulo",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SP"
+          ],
+          "abrangencia": "São Paulo",
+          "sede": "São Paulo",
+          "urls": {
+            "portal": "https://www.tjsp.jus.br"
+          }
+        },
+        {
+          "tr": "27",
+          "sigla": "TJTO",
+          "nome": "Tribunal de Justiça do Tocantins",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "TO"
+          ],
+          "abrangencia": "Tocantins",
+          "sede": "Palmas",
+          "urls": {
+            "portal": "https://www.tjto.jus.br"
+          }
+        }
+      ]
+    },
+    "9": {
+      "codigo": "9",
+      "nome": "Justiça Militar Estadual",
+      "sigla_ramo": "JME",
+      "download_habilitado": false,
+      "orgaos": [
+        {
+          "tr": "13",
+          "sigla": "TJMMG",
+          "nome": "Tribunal de Justiça Militar de Minas Gerais",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "MG"
+          ],
+          "abrangencia": "Minas Gerais",
+          "sede": "Belo Horizonte",
+          "urls": {
+            "portal": "https://www.tjmmg.jus.br"
+          }
+        },
+        {
+          "tr": "21",
+          "sigla": "TJMRS",
+          "nome": "Tribunal de Justiça Militar do Rio Grande do Sul",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "RS"
+          ],
+          "abrangencia": "Rio Grande do Sul",
+          "sede": "Porto Alegre",
+          "urls": {
+            "portal": "https://www.tjmrs.jus.br"
+          }
+        },
+        {
+          "tr": "26",
+          "sigla": "TJMSP",
+          "nome": "Tribunal de Justiça Militar de São Paulo",
+          "tipo": "tribunal",
+          "instancia": "segundo_grau",
+          "ufs": [
+            "SP"
+          ],
+          "abrangencia": "São Paulo",
+          "sede": "São Paulo",
+          "urls": {
+            "portal": "https://www.tjmsp.jus.br"
+          }
+        }
+      ]
+    }
+  }
+}

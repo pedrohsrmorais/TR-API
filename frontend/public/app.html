@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TR-API</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body>
+  <header class="topo">
+    <div class="topo__marca">
+      <span class="marca__selo marca__selo--pequeno">TR</span>
+      <strong>TR-API</strong>
+    </div>
+    <nav class="abas" role="tablist">
+      <a href="#consultar" class="aba" role="tab" data-aba="consultar">Consultar processo</a>
+      <a href="#meus-processos" class="aba" role="tab" data-aba="meus-processos">Meus processos</a>
+    </nav>
+    <div class="topo__usuario">
+      <span id="usuario-email"></span>
+      <button id="botao-sair" class="botao botao--fantasma">Sair</button>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <!-- ============ CONSULTAR ============ -->
+    <section id="secao-consultar" class="secao" data-secao="consultar">
+      <form id="form-consulta" class="busca cartao">
+        <label for="numero">Número do processo (CNJ)</label>
+        <div class="busca__linha">
+          <input id="numero" name="numero" inputmode="numeric" autocomplete="off"
+                 placeholder="0000000-00.0000.0.00.0000" maxlength="25" required>
+          <button type="submit" class="botao botao--primario" id="botao-consultar">Consultar</button>
+        </div>
+        <p id="identificacao-previa" class="dica"></p>
+      </form>
+
+      <p id="erro-consulta" class="alerta alerta--erro" hidden></p>
+      <div id="resultado-consulta"></div>
+    </section>
+
+    <!-- ============ MEUS PROCESSOS ============ -->
+    <section id="secao-meus-processos" class="secao" data-secao="meus-processos" hidden>
+      <div class="secao__cabecalho">
+        <h2>Meus processos</h2>
+        <button id="botao-atualizar-lista" class="botao botao--fantasma">Atualizar</button>
+      </div>
+      <div id="downloads-andamento"></div>
+      <p id="erro-lista" class="alerta alerta--erro" hidden></p>
+      <div id="lista-processos"></div>
+    </section>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

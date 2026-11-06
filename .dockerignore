@@ -1,0 +1,13 @@
+**/node_modules
+**/npm-debug.log*
+**/.env
+.git
+.github
+docs
+database
+infra
+frontend
+**/tests
+**/coverage
+worker/tmp
+worker/debug

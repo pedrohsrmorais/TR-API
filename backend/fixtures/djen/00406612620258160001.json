@@ -1,0 +1,375 @@
+{
+    "status": "success",
+    "message": "Sucesso",
+    "count": 8,
+    "items": [
+        {
+            "id": 736899301,
+            "data_disponibilizacao": "2026-10-02",
+            "siglaTribunal": "TJPR",
+            "tipoComunicacao": "Intimação",
+            "nomeOrgao": "16ª Vara Cível de Curitiba",
+            "idOrgao": 7290,
+            "texto": "Intimação referente ao movimento (seq. 77) JUNTADA DE CERTIDÃO (23/09/2026). Acesse o sistema Projudi do Tribunal de Justiça do Paraná para mais detalhes.",
+            "numero_processo": "00406612620258160001",
+            "meio": "D",
+            "link": "https://projudi.tjpr.jus.br/projudi/processo/validacaoDocumentos.do?_tj=8a6c53f8698c7ff7826b4c776d71316d1925abc508bbf0c37395a1a670526233b6c9f79bbd6370991feb8f95a19d6ce0fb69e76207a97c3f",
+            "tipoDocumento": "Intimação",
+            "nomeClasse": "EXECUçãO DE TíTULO JUDICIAL",
+            "codigoClasse": "1111",
+            "numeroComunicacao": 73068,
+            "ativo": true,
+            "hash": "vLko4Pw1RXzcz75foTGjdd1ZbAKq5V",
+            "status": "P",
+            "motivo_cancelamento": null,
+            "data_cancelamento": null,
+            "datadisponibilizacao": "02/10/2026",
+            "meiocompleto": "Diário de Justiça Eletrônico Nacional",
+            "numeroprocessocommascara": "0040661-26.2025.8.16.0001",
+            "destinatarios": [
+                {
+                    "nome": "BANCO DO BRASIL S/A",
+                    "comunicacao_id": 736899301,
+                    "polo": "A"
+                }
+            ],
+            "destinatarioadvogados": [
+                {
+                    "id": 1381333768,
+                    "comunicacao_id": 736899301,
+                    "advogado_id": 2886341,
+                    "created_at": "2026-09-23T18:44:42",
+                    "updated_at": "2026-09-23T18:44:42",
+                    "advogado": {
+                        "id": 2886341,
+                        "nome": "LOUISE RAINER PEREIRA GIONEDIS",
+                        "numero_oab": "8123",
+                        "uf_oab": "PR"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 709870287,
+            "data_disponibilizacao": "2026-09-04",
+            "siglaTribunal": "TJPR",
+            "tipoComunicacao": "Intimação",
+            "nomeOrgao": "16ª Vara Cível de Curitiba",
+            "idOrgao": 7290,
+            "texto": "Intimação referente ao movimento (seq. 71) JUNTADA DE ATO ORDINATÓRIO (26/08/2026). Acesse o sistema Projudi do Tribunal de Justiça do Paraná para mais detalhes.",
+            "numero_processo": "00406612620258160001",
+            "meio": "D",
+            "link": "https://projudi.tjpr.jus.br/projudi/processo/validacaoDocumentos.do?_tj=8a6c53f8698c7ff7826b4c776d71316d1925abc508bbf0c37395a1a670526233b46f8046c498b92a23f9cfa8fa8c1df31b882ea05102a187",
+            "tipoDocumento": "Intimação",
+            "nomeClasse": "EXECUçãO DE TíTULO JUDICIAL",
+            "codigoClasse": "1111",
+            "numeroComunicacao": 57782,
+            "ativo": true,
+            "hash": "qMO79lz3ZPgcPnNh3Tgy2826mDByKE",
+            "status": "P",
+            "motivo_cancelamento": null,
+            "data_cancelamento": null,
+            "datadisponibilizacao": "04/09/2026",
+            "meiocompleto": "Diário de Justiça Eletrônico Nacional",
+            "numeroprocessocommascara": "0040661-26.2025.8.16.0001",
+            "destinatarios": [
+                {
+                    "nome": "BANCO DO BRASIL S/A",
+                    "comunicacao_id": 709870287,
+                    "polo": "A"
+                }
+            ],
+            "destinatarioadvogados": [
+                {
+                    "id": 1323554770,
+                    "comunicacao_id": 709870287,
+                    "advogado_id": 2886341,
+                    "created_at": "2026-08-26T16:45:53",
+                    "updated_at": "2026-08-26T16:45:53",
+                    "advogado": {
+                        "id": 2886341,
+                        "nome": "LOUISE RAINER PEREIRA GIONEDIS",
+                        "numero_oab": "8123",
+                        "uf_oab": "PR"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 687074936,
+            "data_disponibilizacao": "2026-08-12",
+            "siglaTribunal": "TJPR",
+            "tipoComunicacao": "Intimação",
+            "nomeOrgao": "16ª Vara Cível de Curitiba",
+            "idOrgao": 7290,
+            "texto": "Intimação referente ao movimento (seq. 54) DECORRIDO PRAZO DE BANCO DO BRASIL S/A (14/04/2026). Acesse o sistema Projudi do Tribunal de Justiça do Paraná para mais detalhes.",
+            "numero_processo": "00406612620258160001",
+            "meio": "D",
+            "link": "https://projudi.tjpr.jus.br/projudi/processo/validacaoDocumentos.do?_tj=8a6c53f8698c7ff7826b4c776d71316d1925abc508bbf0c37395a1a670526233a9c0534a396a0fb3d662cc8475ab8017ec9d904e368f49b1",
+            "tipoDocumento": "Intimação",
+            "nomeClasse": "EXECUçãO DE TíTULO JUDICIAL",
+            "codigoClasse": "1111",
+            "numeroComunicacao": 41905,
+            "ativo": true,
+            "hash": "2nqe4VJbYavcP74HzTn1dXBRKk7AgO",
+            "status": "P",
+            "motivo_cancelamento": null,
+            "data_cancelamento": null,
+            "datadisponibilizacao": "12/08/2026",
+            "meiocompleto": "Diário de Justiça Eletrônico Nacional",
+            "numeroprocessocommascara": "0040661-26.2025.8.16.0001",
+            "destinatarios": [
+                {
+                    "nome": "BANCO DO BRASIL S/A",
+                    "comunicacao_id": 687074936,
+                    "polo": "A"
+                }
+            ],
+            "destinatarioadvogados": [
+                {
+                    "id": 1275384233,
+                    "comunicacao_id": 687074936,
+                    "advogado_id": 2886341,
+                    "created_at": "2026-08-03T15:42:30",
+                    "updated_at": "2026-08-03T15:42:30",
+                    "advogado": {
+                        "id": 2886341,
+                        "nome": "LOUISE RAINER PEREIRA GIONEDIS",
+                        "numero_oab": "8123",
+                        "uf_oab": "PR"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 567174300,
+            "data_disponibilizacao": "2026-04-01",
+            "siglaTribunal": "TJPR",
+            "tipoComunicacao": "Intimação",
+            "nomeOrgao": "16ª Vara Cível de Curitiba",
+            "idOrgao": 7290,
+            "texto": "Intimação referente ao movimento (seq. 46) JUNTADA DE INTIMAÇÃO - CUSTAS PROCESSUAIS (23/03/2026). Acesse o sistema Projudi do Tribunal de Justiça do Paraná para mais detalhes.",
+            "numero_processo": "00406612620258160001",
+            "meio": "D",
+            "link": "https://projudi.tjpr.jus.br/projudi/processo/validacaoDocumentos.do?_tj=8a6c53f8698c7ff7826b4c776d71316d1925abc508bbf0c37395a1a6705262339c1f6103b45dc5853ab693697ba5eeb493f12492feb6f562",
+            "tipoDocumento": "Intimação",
+            "nomeClasse": "EXECUçãO DE TíTULO JUDICIAL",
+            "codigoClasse": "1111",
+            "numeroComunicacao": 50540,
+            "ativo": true,
+            "hash": "wEp4n8Jx614coX8HeTaqbMaR1ObAW3",
+            "status": "P",
+            "motivo_cancelamento": null,
+            "data_cancelamento": null,
+            "datadisponibilizacao": "01/04/2026",
+            "meiocompleto": "Diário de Justiça Eletrônico Nacional",
+            "numeroprocessocommascara": "0040661-26.2025.8.16.0001",
+            "destinatarios": [
+                {
+                    "comunicacao_id": 567174300,
+                    "nome": "BANCO DO BRASIL S/A",
+                    "polo": "A"
+                }
+            ],
+            "destinatarioadvogados": [
+                {
+                    "id": 1026039257,
+                    "comunicacao_id": 567174300,
+                    "advogado_id": 2886341,
+                    "created_at": "2026-03-23T15:13:09",
+                    "updated_at": "2026-03-23T15:13:09",
+                    "advogado": {
+                        "id": 2886341,
+                        "nome": "LOUISE RAINER PEREIRA GIONEDIS",
+                        "numero_oab": "8123",
+                        "uf_oab": "PR"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 539179188,
+            "data_disponibilizacao": "2026-03-04",
+            "siglaTribunal": "TJPR",
+            "tipoComunicacao": "Intimação",
+            "nomeOrgao": "16ª Vara Cível de Curitiba",
+            "idOrgao": 7290,
+            "texto": "Intimação referente ao movimento (seq. 37) JUNTADA DE CERTIDÃO DE DECURSO DE PRAZO (23/02/2026). Acesse o sistema Projudi do Tribunal de Justiça do Paraná para mais detalhes.",
+            "numero_processo": "00406612620258160001",
+            "meio": "D",
+            "link": "https://projudi.tjpr.jus.br/projudi/processo/validacaoDocumentos.do?_tj=8a6c53f8698c7ff7826b4c776d71316d1925abc508bbf0c37395a1a670526233be9be825b9d152c242d6794fd5db01fa51414399d749420a",
+            "tipoDocumento": "Intimação",
+            "nomeClasse": "MONITóRIA",
+            "codigoClasse": "40",
+            "numeroComunicacao": 71991,
+            "ativo": true,
+            "hash": "Ly1D82wNZyPc9bminTkg4Ja65eBjo9",
+            "status": "P",
+            "motivo_cancelamento": null,
+            "data_cancelamento": null,
+            "datadisponibilizacao": "04/03/2026",
+            "meiocompleto": "Diário de Justiça Eletrônico Nacional",
+            "numeroprocessocommascara": "0040661-26.2025.8.16.0001",
+            "destinatarios": [
+                {
+                    "comunicacao_id": 539179188,
+                    "nome": "BANCO DO BRASIL S/A",
+                    "polo": "A"
+                }
+            ],
+            "destinatarioadvogados": [
+                {
+                    "id": 965919072,
+                    "comunicacao_id": 539179188,
+                    "advogado_id": 2886341,
+                    "created_at": "2026-02-23T17:11:13",
+                    "updated_at": "2026-02-23T17:11:13",
+                    "advogado": {
+                        "id": 2886341,
+                        "nome": "LOUISE RAINER PEREIRA GIONEDIS",
+                        "numero_oab": "8123",
+                        "uf_oab": "PR"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 466337389,
+            "data_disponibilizacao": "2025-11-27",
+            "siglaTribunal": "TJPR",
+            "tipoComunicacao": "Intimação",
+            "nomeOrgao": "16ª Vara Cível de Curitiba",
+            "idOrgao": 7290,
+            "texto": "Intimação referente ao movimento (seq. 19) JUNTADA DE INTIMAÇÃO - CUSTAS PROCESSUAIS (18/11/2025). Acesse o sistema Projudi do Tribunal de Justiça do Paraná para mais detalhes.",
+            "numero_processo": "00406612620258160001",
+            "meio": "D",
+            "link": "https://projudi.tjpr.jus.br/projudi/processo/validacaoDocumentos.do?_tj=8a6c53f8698c7ff7826b4c776d71316d1925abc508bbf0c37395a1a670526233038225970ba05ab83a86e56c820a960770aea34552951038",
+            "tipoDocumento": "Intimação",
+            "nomeClasse": "MONITóRIA",
+            "codigoClasse": "40",
+            "numeroComunicacao": 50982,
+            "ativo": true,
+            "hash": "qG7X2owQRVDcq8qu7TdlLKWZek9aWL",
+            "status": "P",
+            "motivo_cancelamento": null,
+            "data_cancelamento": null,
+            "datadisponibilizacao": "27/11/2025",
+            "meiocompleto": "Diário de Justiça Eletrônico Nacional",
+            "numeroprocessocommascara": "0040661-26.2025.8.16.0001",
+            "destinatarios": [
+                {
+                    "nome": "BANCO DO BRASIL S/A",
+                    "comunicacao_id": 466337389,
+                    "polo": "A"
+                }
+            ],
+            "destinatarioadvogados": [
+                {
+                    "id": 803493985,
+                    "comunicacao_id": 466337389,
+                    "advogado_id": 2886341,
+                    "created_at": "2025-11-18T15:43:42",
+                    "updated_at": "2025-11-18T15:43:42",
+                    "advogado": {
+                        "id": 2886341,
+                        "nome": "LOUISE RAINER PEREIRA GIONEDIS",
+                        "numero_oab": "8123",
+                        "uf_oab": "PR"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 455167820,
+            "data_disponibilizacao": "2025-11-14",
+            "siglaTribunal": "TJPR",
+            "tipoComunicacao": "Intimação",
+            "nomeOrgao": "16ª Vara Cível de Curitiba",
+            "idOrgao": 7290,
+            "texto": "Intimação referente ao movimento (seq. 9) JUNTADA DE CERTIDÃO (05/11/2025). Acesse o sistema Projudi do Tribunal de Justiça do Paraná para mais detalhes.",
+            "numero_processo": "00406612620258160001",
+            "meio": "D",
+            "link": "https://projudi.tjpr.jus.br/projudi/processo/validacaoDocumentos.do?_tj=8a6c53f8698c7ff7826b4c776d71316d1925abc508bbf0c37395a1a670526233b2e2a3b4e5a6c8557399c67d058fa6c2108176e7817b757c",
+            "tipoDocumento": "Intimação",
+            "nomeClasse": "MONITóRIA",
+            "codigoClasse": "40",
+            "numeroComunicacao": 75223,
+            "ativo": true,
+            "hash": "voGJwMkOYA7ckvJibTGj9qP6Ka931z",
+            "status": "P",
+            "motivo_cancelamento": null,
+            "data_cancelamento": null,
+            "datadisponibilizacao": "14/11/2025",
+            "meiocompleto": "Diário de Justiça Eletrônico Nacional",
+            "numeroprocessocommascara": "0040661-26.2025.8.16.0001",
+            "destinatarios": [
+                {
+                    "nome": "BANCO DO BRASIL S/A",
+                    "comunicacao_id": 455167820,
+                    "polo": "A"
+                }
+            ],
+            "destinatarioadvogados": [
+                {
+                    "id": 779847134,
+                    "comunicacao_id": 455167820,
+                    "advogado_id": 2886341,
+                    "created_at": "2025-11-05T17:41:00",
+                    "updated_at": "2025-11-05T17:41:00",
+                    "advogado": {
+                        "id": 2886341,
+                        "nome": "LOUISE RAINER PEREIRA GIONEDIS",
+                        "numero_oab": "8123",
+                        "uf_oab": "PR"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 455173349,
+            "data_disponibilizacao": "2025-11-14",
+            "siglaTribunal": "TJPR",
+            "tipoComunicacao": "Intimação",
+            "nomeOrgao": "16ª Vara Cível de Curitiba",
+            "idOrgao": 7290,
+            "texto": "Intimação referente ao movimento (seq. 7) JUNTADA DE ANÁLISE DE PREVENÇÃO (05/11/2025). Acesse o sistema Projudi do Tribunal de Justiça do Paraná para mais detalhes.",
+            "numero_processo": "00406612620258160001",
+            "meio": "D",
+            "link": "https://projudi.tjpr.jus.br/projudi/processo/validacaoDocumentos.do?_tj=8a6c53f8698c7ff7826b4c776d71316d1925abc508bbf0c37395a1a67052623396e8ddf645d1e2abfb348ec0d23664f6cf0a4a0569aeb7a1",
+            "tipoDocumento": "Intimação",
+            "nomeClasse": "MONITóRIA",
+            "codigoClasse": "40",
+            "numeroComunicacao": 77596,
+            "ativo": true,
+            "hash": "QpOqvB2lZ3WcJJdI9TXGlEwZyPD35n",
+            "status": "P",
+            "motivo_cancelamento": null,
+            "data_cancelamento": null,
+            "datadisponibilizacao": "14/11/2025",
+            "meiocompleto": "Diário de Justiça Eletrônico Nacional",
+            "numeroprocessocommascara": "0040661-26.2025.8.16.0001",
+            "destinatarios": [
+                {
+                    "nome": "BANCO DO BRASIL S/A",
+                    "comunicacao_id": 455173349,
+                    "polo": "A"
+                }
+            ],
+            "destinatarioadvogados": [
+                {
+                    "id": 779856697,
+                    "comunicacao_id": 455173349,
+                    "advogado_id": 2886341,
+                    "created_at": "2025-11-05T17:43:01",
+                    "updated_at": "2025-11-05T17:43:01",
+                    "advogado": {
+                        "id": 2886341,
+                        "nome": "LOUISE RAINER PEREIRA GIONEDIS",
+                        "numero_oab": "8123",
+                        "uf_oab": "PR"
+                    }
+                }
+            ]
+        }
+    ]
+}

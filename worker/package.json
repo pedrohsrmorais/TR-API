@@ -1,0 +1,20 @@
+{
+  "name": "tr-api-worker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Robô do TR-API: consome a fila de downloads, baixa a íntegra nos tribunais e guarda no S3.",
+  "main": "index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "node --test \"tests/**/*.test.js\""
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1163.0",
+    "mysql2": "^3.24.6",
+    "playwright": "^1.65.0"
+  }
+}

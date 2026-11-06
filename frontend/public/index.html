@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TR-API · Entrar</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="pagina-login">
+  <main class="login">
+    <div class="login__marca">
+      <span class="marca__selo">TR</span>
+      <div>
+        <h1>TR-API</h1>
+        <p>Consulta e íntegra de processos</p>
+      </div>
+    </div>
+
+    <form id="form-login" class="cartao" novalidate>
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" autocomplete="username" required autofocus>
+
+      <label for="senha">Senha</label>
+      <input id="senha" name="senha" type="password" autocomplete="current-password" required>
+
+      <p id="erro-login" class="alerta alerta--erro" hidden></p>
+
+      <button type="submit" class="botao botao--primario botao--largo">Entrar</button>
+    </form>
+  </main>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>
